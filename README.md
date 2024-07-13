@@ -7,4 +7,3 @@ Prerequisite:
 2. Nerd font [github repo](https://github.com/ryanoasis/nerd-fonts)
     - Install this font and set terminal font to it.
 
-
