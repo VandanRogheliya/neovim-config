@@ -1,10 +1,11 @@
 {
-  "coc.preferences.extensionUpdateCheck": "daily",
-  "coc.preferences.diagnostic.checkCurrentLine": true,
-  "coc.preferences.diagnostic.messageLevel": "more",
-  "coc.source.spell.enabled": true,
-  "coc.source.spell.filetypes": ["javascript", "typescript", "python", "lua", "vim", "go"],
-  "spellright.language": ["en"],
-  "spellright.documentTypes": ["markdown", "text", "plaintext", "typescript", "javascript", "python", "lua", "vim", "go"]
+    "suggest.autoTrigger": "none",
+    "suggest.enablePreview": false,
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.diagnostic.checkCurrentLine": true,
+    "coc.preferences.diagnostic.messageLevel": "more",
+    "coc.source.spell.enabled": true,
+    "coc.source.spell.filetypes": ["javascript", "typescript", "python", "lua", "vim", "go", "Dockerfile"],
+    "spellright.language": ["en"],
+    "spellright.documentTypes": ["markdown", "text", "plaintext", "typescript", "javascript", "python", "lua", "vim", "go"]
 }
-
