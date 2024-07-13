@@ -28,13 +28,12 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
-vim.opt.spell = true
-vim.opt.spelllang = "en_us"
-
-
 -- Function to check if macOS is in dark mode
 local function is_dark_mode()
     local handle = io.popen("defaults read -g AppleInterfaceStyle 2>/dev/null")
+    if handle == nil then
+        return
+    end
     local result = handle:read("*a")
     handle:close()
     return result:match("Dark")
@@ -48,3 +47,35 @@ else
     vim.o.background = 'light'
     print("Setting background to light mode")
 end
+
+-- Spell
+vim.cmd [[
+  set spell
+  set spelllang=en_us
+  set spelloptions=noplainbuffer
+  set spellcapcheck=
+  set spellsuggest=best
+
+  autocmd FileType go setlocal spell spelllang=en_us spelloptions=noplainbuffer spellcapcheck= spellsuggest=best
+]]
+
+-- Save on blur
+-- Write all writable buffers when changing buffers or losing focus.
+vim.opt.autowriteall = true  -- Save when doing various buffer-switching things.
+
+-- Save anytime we leave a buffer or Neovim loses focus.
+vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
+  callback = function()
+    if vim.bo.modified and not vim.bo.readonly and vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
+      vim.api.nvim_command('silent update')
+    end
+  end,
+})
+
+-- White space
+vim.opt.list = true
+vim.opt.listchars:append("tab:▸\\ ")
+vim.opt.listchars:append("trail:·")
+vim.opt.listchars:append("extends:>")
+vim.opt.listchars:append("precedes:<")
+vim.opt.listchars:append("eol:↴")
