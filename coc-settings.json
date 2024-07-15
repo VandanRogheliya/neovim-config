@@ -7,5 +7,25 @@
     "coc.source.spell.enabled": true,
     "coc.source.spell.filetypes": ["javascript", "typescript", "python", "lua", "vim", "go", "Dockerfile"],
     "spellright.language": ["en"],
-    "spellright.documentTypes": ["markdown", "text", "plaintext", "typescript", "javascript", "python", "lua", "vim", "go"]
+    "spellright.documentTypes": [
+      "markdown",
+      "text",
+      "plaintext",
+      "typescript",
+      "javascript",
+      "python",
+      "lua",
+      "vim",
+      "go"
+    ],
+    "cSpell.userWords": [
+      "ACKS",
+      "Rogheliya",
+      "algo",
+      "deduplication",
+      "dont",
+      "spellright",
+      "vite",
+      "vitejs"
+    ]
 }
