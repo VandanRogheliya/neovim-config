@@ -20,11 +20,23 @@
     ],
     "cSpell.userWords": [
       "ACKS",
+      "AUTOMIGRATE",
+      "Msgf",
       "Rogheliya",
       "algo",
+      "boto",
+      "connecttimeout",
+      "dbname",
       "deduplication",
       "dont",
+      "envfile",
+      "gonic",
+      "gorm",
+      "minidle",
+      "poolsize",
       "spellright",
+      "sslmode",
+      "unmarshaling",
       "vite",
       "vitejs"
     ]
