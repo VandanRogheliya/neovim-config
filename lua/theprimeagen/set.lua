@@ -26,7 +26,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "95"
 
 -- Function to check if macOS is in dark mode
 local function is_dark_mode()
@@ -61,15 +61,15 @@ vim.cmd [[
 
 -- Save on blur
 -- Write all writable buffers when changing buffers or losing focus.
-vim.opt.autowriteall = true  -- Save when doing various buffer-switching things.
+vim.opt.autowriteall = true -- Save when doing various buffer-switching things.
 
 -- Save anytime we leave a buffer or Neovim loses focus.
 vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
-  callback = function()
-    if vim.bo.modified and not vim.bo.readonly and vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
-      vim.api.nvim_command('silent update')
-    end
-  end,
+    callback = function()
+        if vim.bo.modified and not vim.bo.readonly and vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
+            vim.api.nvim_command('silent update')
+        end
+    end,
 })
 
 -- White space

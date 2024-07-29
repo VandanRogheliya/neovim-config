@@ -65,3 +65,6 @@ S3
 env
 vitualenv
 pipx
+serializers
+CustomerRelation
+personalised

@@ -10,7 +10,7 @@ return {
         local harpoon_mark = require("harpoon.mark")
 
         vim.keymap.set("n", "<leader>h", function() harpoon_mark.add_file() end)
-        vim.keymap.set("n", "<C-e>", function() harpoon_ui.toggle_quick_menu() end)
+        vim.keymap.set("n", "<C-p>", function() harpoon_ui.toggle_quick_menu() end)
 
         vim.keymap.set("n", "<C-h>", function() harpoon_ui.nav_file(1) end)
         vim.keymap.set("n", "<C-t>", function() harpoon_ui.nav_file(2) end)
