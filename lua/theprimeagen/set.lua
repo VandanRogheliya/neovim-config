@@ -59,18 +59,27 @@ vim.cmd [[
   autocmd FileType go setlocal spell spelllang=en_us spelloptions=noplainbuffer spellcapcheck= spellsuggest=best
 ]]
 
--- Save on blur
--- Write all writable buffers when changing buffers or losing focus.
-vim.opt.autowriteall = true -- Save when doing various buffer-switching things.
+-- Save on text change
+-- vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
+--     callback = function()
+--         if vim.bo.modified and not vim.bo.readonly and vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
+--             vim.api.nvim_command('silent update')
+--         end
+--     end,
+-- })
 
--- Save anytime we leave a buffer or Neovim loses focus.
-vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
-    callback = function()
-        if vim.bo.modified and not vim.bo.readonly and vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
-            vim.api.nvim_command('silent update')
-        end
-    end,
-})
+-- -- Save on blur
+-- -- Write all writable buffers when changing buffers or losing focus.
+-- vim.opt.autowriteall = true -- Save when doing various buffer-switching things.
+--
+-- -- Save anytime we leave a buffer or Neovim loses focus.
+-- vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost" }, {
+--     callback = function()
+--         if vim.bo.modified and not vim.bo.readonly and vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
+--             vim.api.nvim_command('silent update')
+--         end
+--     end,
+-- })
 
 -- White space
 vim.opt.list = true

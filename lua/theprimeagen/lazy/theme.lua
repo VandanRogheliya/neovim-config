@@ -1,4 +1,14 @@
 return
+-- {
+--     "tiagovla/tokyodark.nvim",
+--     opts = {
+--         -- custom options here
+--     },
+--     config = function(_, opts)
+--         require("tokyodark").setup(opts) -- calling setup is optional
+--         vim.cmd [[colorscheme tokyodark]]
+--     end,
+-- }
 {
     "folke/tokyonight.nvim",
     name = "tokyonight",
@@ -7,7 +17,7 @@ return
     opts = {},
     config = function()
         require("tokyonight").setup {
-                style = 'moon'
+            style = 'moon'
         }
         vim.cmd.colorscheme "tokyonight"
     end
