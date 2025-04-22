@@ -9,29 +9,29 @@ return
 --         vim.cmd [[colorscheme tokyodark]]
 --     end,
 -- }
-{
-    "folke/tokyonight.nvim",
-    name = "tokyonight",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-    config = function()
-        require("tokyonight").setup {
-            style = 'moon'
-        }
-        vim.cmd.colorscheme "tokyonight"
-    end
-}
 -- {
---     'navarasu/onedark.nvim',
---     name = "onedark",
---     lazy = false, -- make sure we load this during startup if it is your main colorscheme
+--     "folke/tokyonight.nvim",
+--     name = "tokyonight",
+--     lazy = false,
 --     priority = 1000,
+--     opts = {},
 --     config = function()
---         require("onedark").setup {}
---         vim.cmd.colorscheme "onedark"
+--         require("tokyonight").setup {
+--             style = 'moon'
+--         }
+--         vim.cmd.colorscheme "tokyonight"
 --     end
 -- }
+{
+    'navarasu/onedark.nvim',
+    name = "onedark",
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000,
+    config = function()
+        require("onedark").setup {}
+        vim.cmd.colorscheme "onedark"
+    end
+}
 -- {
 --     "catppuccin/nvim",
 --     name = "catppuccin",
