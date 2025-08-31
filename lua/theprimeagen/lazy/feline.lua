@@ -23,10 +23,10 @@
 --     end
 -- }
 local M = {
-    "freddiehaddad/feline.nvim",
+    "famiu/feline.nvim",
     dependencies = {
         'SmiteshP/nvim-navic',
-        'nvim-web-devicons',
+        'nvim-tree/nvim-web-devicons',
     },
     lazy = false,
 }

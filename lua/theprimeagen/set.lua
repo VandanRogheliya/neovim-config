@@ -52,11 +52,10 @@ end
 vim.cmd [[
   set spell
   set spelllang=en_us
-  set spelloptions=noplainbuffer
   set spellcapcheck=
   set spellsuggest=best
 
-  autocmd FileType go setlocal spell spelllang=en_us spelloptions=noplainbuffer spellcapcheck= spellsuggest=best
+  autocmd FileType go setlocal spell spelllang=en_us spellcapcheck= spellsuggest=best
 ]]
 
 -- Save on text change
