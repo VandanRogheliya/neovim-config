@@ -1,0 +1,7 @@
+return {
+    --  Helps to include copilot suggestion in completion menu
+    "zbirenbaum/copilot-cmp",
+    config = function()
+        require("copilot_cmp").setup()
+    end
+}

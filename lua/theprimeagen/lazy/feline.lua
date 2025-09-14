@@ -174,8 +174,23 @@ function M.config()
         end,
         right_sep = ' '
     }
-    -- filename
+    -- Arrow info
     components.active[1][3] = {
+        provider = function()
+            local statusline = require('arrow.statusline')
+            return statusline.text_for_statusline_with_icons()
+        end,
+        hl = function()
+            local val = {}
+            val.fg = 'white'
+            val.bg = 'bg'
+            val.style = 'bold'
+            return val
+        end,
+        right_sep = ' '
+    }
+    -- filename
+    components.active[1][4] = {
         --[[ provider = function() ]]
         --[[   return vim.fn.expand("%:F") ]]
         --[[ end, ]]

@@ -22,15 +22,21 @@ return
 --         vim.cmd.colorscheme "tokyonight"
 --     end
 -- }
+-- {
+--     'navarasu/onedark.nvim',
+--     name = "onedark",
+--     lazy = false, -- make sure we load this during startup if it is your main colorscheme
+--     priority = 1000,
+--     config = function()
+--         require("onedark").setup {}
+--         vim.cmd.colorscheme "onedark"
+--     end
+-- }
 {
-    'navarasu/onedark.nvim',
-    name = "onedark",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000,
+    "rebelot/kanagawa.nvim",
     config = function()
-        require("onedark").setup {}
-        vim.cmd.colorscheme "onedark"
-    end
+        vim.cmd("colorscheme kanagawa-wave")
+    end,
 }
 -- {
 --     "catppuccin/nvim",
